@@ -46,7 +46,7 @@
       "purpose": "maskable"
      },
      {
-      "src": "https://raw.githubusercontent.com/pwachistes/pwachistes/main/img/maskable_icon_x128.png.png",
+      "src": "https://raw.githubusercontent.com/pwachistes/pwachistes/main/img/maskable_icon_x128.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "any"
@@ -71,7 +71,7 @@
      },
      {
       "src": "https://raw.githubusercontent.com/pwachistes/pwachistes/main/img/maskable_icon.png",
-      "sizes": "3413x3413",
+      "sizes": "2048x2048",
       "type": "image/png",
       "purpose": "any"
      },
