@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>Chistes</title>
+
+ <!-- Resumen para los motores de búsqueda. -->
+ <meta name="description" content="Ejemplo de PWA con Material Design">
+
+ <script src="js/registraServiceWorker.js"></script>
+
+ <meta name="viewport" content="width=device-width">
+
+ <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+ <meta name="theme-color" content="#fffbfe">
+
+ <!-- Ícono para la página web, que normalmente se pone en la raíz del sitio.
+  Puede ser diferente para cada página. -->
+ <link rel="icon" sizes="32x32" href="favicon.ico">
+
+ <!-- Configuración de la PWA para Chrome, Edge y Safari.
+  Debe ponerse en todas las páginas. -->
+ <link rel="manifest" href="site.webmanifest">
+
+ <!-- Permite a los navegadores, que como Safari no soportan el estándar
+  completo de custom elementsm, lo cumplan totalmente. Debe ponerse en todas
+  las páginas. -->
+ <script src="ungap/custom-elements.js"></script>
+
+ <!-- Configuración de todas las páginas con JavaSript. -->
+ <script type="module" src="js/configura.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+ <link rel="stylesheet" href="css/transicion_completa.css">
+
+</head>
+
+<body>
+
+ <md-top-app-bar class="center-aligned">
+
+  <h1>Chistes</h1>
+
+  <button is="md-menu-button" slot="navigation"></button>
+
+  <button type="button" class="md-standard-icon-button avatar" title="Perfil"
+    slot="action">
+   <span class="material-symbols-outlined">account_circle</span>
+  </button>
+
+ </md-top-app-bar>
+
+ 
+  <p>
+   Selecciona un integrante y descubre el chiste que colocó.
+  </p>
+  <form action="" id="form" novalidate onsubmit="procesa(event)">
+    <md-top-app-bar>
+        <h1>Formulario</h1>
+        <button is="md-menu-button" slot="navigation"></button>
+    </md-top-app-bar>
+    <main>
+    <p>
+        <!--CAMBIAR NOMBRE DE LAS CLASES-->
+        <span id="etiquetaChistes" class="md-filled-text-field" accesskey="C">
+            <md-select-menu name="selectIntegrante" required options="OpcionesDeIntegrantes"
+           oninput="copiaMensajes()"></md-select-menu>
+            <span>Integrante*</span>
+            <small id="supportingIntegrantes">Obligatorio</small>
+        </span>
+    </p>
+
+    <p>
+        <button class="md-filled-button" style="width: 100%;">Enviar</button>
+    </p>
+    </main>
+
+    <md-options-menu id="opcionesDeIntegrantes" aria-label="Opciones de integrantes">
+        <span data-value="" title="Selecciona opción"></span>
+        <span data-value="Edher">Edher</span>
+        <span data-value="Sehas">Sehas</span>
+        <span data-value="Enrique">Enrique</span>
+        <span data-value="Ronaldo">Ronaldo</span>
+        <span data-value="Alexandra">Alexandra</span>
+        <span data-value="Ana Lilia">Ana Lilia</span>
+        <span data-value="Edgar">Edgar</span>
+        <span data-value="Andres">Andrés</span>
+       </md-options-menu>
+       <nav-drw></nav-drw>
+  </form>
+
+  <script type="module">
+    import { muestraTextoDeAyuda } from "./lib/js/muestraTextoDeAyuda.js"
+    import { exportaAHtml } from "./lib/js/exportaAHtml.js"
+    import { muestraError } from "./lib/js/muestraError.js"
+
+    function copiaMensajes() {
+   muestraTextoDeAyuda(selecIntegrante, supportingIntegrantes, "Obligatorio")
+  }
+  exportaAHtml(copiaMensajes)
+
+   /**
+   * @param {SubmitEvent} evt
+   */
+   function procesa(evt) {
+   evt.preventDefault()
+   try {
+    copiaMensajes()
+    if (
+     selecIntegrante.validity.valid) {
+     const integrante = selecIntegrante.value
+     const resultado = recomienda(integrante)
+     alert(resultado)
+    }
+   } catch (e) {
+    muestraError(e)
+   }
+  }
+  exportaAHtml(procesa)
+
+  /** @param {string} genero */
+  function recomienda(integrante) {
+   if (integrante === "Edher") {
+    return "Para el pop te recomiendo a Dua Lipa."
+   } else if (integrante === "Sehas") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }else if (integrante === "Enrique") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }else if (integrante === "Ronaldo") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }else if (integrante === "Alexandra") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }else if (integrante === "Ana Lilia") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }else if (integrante === "Edgar") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }else if (integrante === "Andres") {
+    return "Para el reguetón te recomiendo a Bad Bunny."
+   }
+  }
+
+  </script>
+ 
+ <nav-drw></nav-drw>
+
+</body>
+
+</html>
