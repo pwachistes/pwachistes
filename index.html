@@ -60,11 +60,11 @@
         </p>
 
         <!--CAMBIAR NOMBRE DE LAS CLASES-->
-        <span id="etiquetaChistes" class="md-filled-text-field" accesskey="C">
-            <md-select-menu name="selectIntegrante" required options="opcionesDeIntegrantes"
+        <span id="etiquetaChistes" class="md-filled-text-field" accesskey="G">
+            <md-select-menu id="selectGenero" required options="opcionesDeIntegrantes"
            oninput="copiaMensajes()"></md-select-menu>
             <span>Integrante*</span>
-            <small id="supportingIntegrantes">Obligatorio</small>
+            <small id="supportingGenero">Obligatorio</small>
         </span>
     </p>
 
@@ -73,7 +73,7 @@
     </p>
     </main>
 
-    <md-options-menu id="opcionesDeIntegrantes" aria-label="Opciones de integrantes">
+    <md-options-menu id="opcionesDeGenero" aria-label="Opciones de integrantes">
         <span data-value="" title="Selecciona opción"></span>
         <span data-value="Edher">Edher</span>
         <span data-value="Sehas">Sehas</span>
@@ -93,7 +93,7 @@
     import { muestraError } from "./lib/js/muestraError.js"
 
     function copiaMensajes() {
-   muestraTextoDeAyuda(selectIntegrante, supportingIntegrantes, "Obligatorio")
+   muestraTextoDeAyuda(selectGenero, supportingGenero, "Obligatorio")
   }
   exportaAHtml(copiaMensajes)
 
@@ -105,9 +105,9 @@
    try {
     copiaMensajes()
     if (
-     selectIntegrante.validity.valid) {
-     const integrante = selectIntegrante.value
-     const resultado = recomienda(integrante)
+     selectGenero.validity.valid) {
+     const genero = selectGenero.value
+     const resultado = recomienda(genero)
      alert(resultado)
     }
    } catch (e) {
@@ -117,22 +117,22 @@
   exportaAHtml(procesa)
 
   /** @param {string} genero */
-  function recomienda(integrante) {
-   if (integrante === "Edher") {
+  function recomienda(genero) {
+   if (genero === "Edher") {
     return "Para el pop te recomiendo a Dua Lipa."
-   } else if (integrante === "Sehas") {
+   } else if (genero === "Sehas") {
     return "Para el reguetón te recomiendo a Bad Bunny."
-   }else if (integrante === "Enrique") {
+   }else if (genero === "Enrique") {
     return "Para el reguetón te recomiendo a Bad Bunny."
-   }else if (integrante === "Ronaldo") {
+   }else if (genero === "Ronaldo") {
     return "Para el reguetón te recomiendo a Bad Bunny."
-   }else if (integrante === "Alexandra") {
+   }else if (genero === "Alexandra") {
     return "Para el reguetón te recomiendo a Bad Bunny."
-   }else if (integrante === "Ana Lilia") {
+   }else if (genero === "Ana Lilia") {
     return "Para el reguetón te recomiendo a Bad Bunny."
-   }else if (integrante === "Edgar") {
+   }else if (genero === "Edgar") {
     return "Para el reguetón te recomiendo a Bad Bunny."
-   }else if (integrante === "Andres") {
+   }else if (genero === "Andres") {
     return "Para el reguetón te recomiendo a Bad Bunny."
    }
   }
