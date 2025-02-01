@@ -12,14 +12,14 @@
     "description": "PWA con componentes de Material Design.",
     "screenshots": [
      {
-      "src": "/img/screenshot_horizontal.png",
+      "src": "/img/https://raw.githubusercontent.com/pwachistes/pwachistes/main/img/screenshot_horizontal.png",
       "sizes": "1257x646",
       "type": "image/png",
       "form_factor": "wide",
       "label": "PWA con Material Design"
      },
      {
-      "src": "/img/screenshot_vertical.png",
+      "src": "/img/https://raw.githubusercontent.com/pwachistes/pwachistes/main/img/screenshot_vertical.png",
       "sizes": "595x644",
       "type": "image/png",
       "form_factor": "narrow",
