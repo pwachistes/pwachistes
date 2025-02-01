@@ -51,20 +51,17 @@
 
  </md-top-app-bar>
 
- 
-  <p>
-   Selecciona un integrante y descubre el chiste que colocó.
-  </p>
+
   <form action="" id="form" novalidate onsubmit="procesa(event)">
-    <md-top-app-bar>
-        <h1>Formulario</h1>
-        <button is="md-menu-button" slot="navigation"></button>
-    </md-top-app-bar>
     <main>
     <p>
+        <p>
+            Selecciona un integrante y descubre el chiste que colocó.
+        </p>
+
         <!--CAMBIAR NOMBRE DE LAS CLASES-->
         <span id="etiquetaChistes" class="md-filled-text-field" accesskey="C">
-            <md-select-menu name="selectIntegrante" required options="OpcionesDeIntegrantes"
+            <md-select-menu name="selectIntegrante" required options="opcionesDeIntegrantes"
            oninput="copiaMensajes()"></md-select-menu>
             <span>Integrante*</span>
             <small id="supportingIntegrantes">Obligatorio</small>
