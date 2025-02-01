@@ -93,7 +93,7 @@
     import { muestraError } from "./lib/js/muestraError.js"
 
     function copiaMensajes() {
-   muestraTextoDeAyuda(selecIntegrante, supportingIntegrantes, "Obligatorio")
+   muestraTextoDeAyuda(selectIntegrante, supportingIntegrantes, "Obligatorio")
   }
   exportaAHtml(copiaMensajes)
 
@@ -105,7 +105,7 @@
    try {
     copiaMensajes()
     if (
-     selecIntegrante.validity.valid) {
+     selectIntegrante.validity.valid) {
      const integrante = selecIntegrante.value
      const resultado = recomienda(integrante)
      alert(resultado)
