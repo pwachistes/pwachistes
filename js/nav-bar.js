@@ -11,7 +11,7 @@ export class NavBar extends HTMLElement {
     Inicio
    </a>
 
-   <a ${resaltaSiEstasEn(["/ayuda.html"])} href="formulario.html">
+   <a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">
     <span class="material-symbols-outlined">newspaper</span>
     Ayuda
    </a>`
