@@ -28,13 +28,10 @@ const CACHE = "pwamd"
  */
 const ARCHIVOS = [
  "ayuda.html",
-  "favicon.ico",
-  "index.html",
-  "navbar.html",
- "navtab.html",
- "navTabFixed.html",
-  "site.webmanifest",
-  "css/dark-hc.css",
+ "favicon.ico",
+ "index.html",
+ "site.webmanifest",
+ "css/dark-hc.css",
  "css/dark-mc.css",
  "css/dark.css",
  "css/estilos.css",
