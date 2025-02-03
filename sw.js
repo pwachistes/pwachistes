@@ -111,7 +111,7 @@ const ARCHIVOS = [
 ]
 
 // Verifica si el código corre dentro de un service worker.
-if (typeof self !== "undefined" && self.constructor.name === "ServiceWorkerGlobalScope")  {
+if (self instanceof ServiceWorkerGlobalScope)  {
  // Evento al empezar a instalar el servide worker,
  self.addEventListener("install",
   (/** @type {ExtendableEvent} */ evt) => {
