@@ -15,7 +15,7 @@
  * conoce como número menor y se cambia cuando se realizan
  * modificaciones menores.
  */
-const VERSION = "1.01"
+const VERSION = "1.02"
 
 /**
  * Nombre de la carpeta de caché.
@@ -107,7 +107,8 @@ const ARCHIVOS = [
  "material-tokens/css/typography.css",
  "material-tokens/css/theme/dark.css",
  "material-tokens/css/theme/light.css",
- "ungap/custom-elements.js"
+ "ungap/custom-elements.js",
+ "/"
 ]
 
 // Verifica si el código corre dentro de un service worker.
