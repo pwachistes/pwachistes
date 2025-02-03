@@ -2,7 +2,7 @@
     "short_name": "Chistes SS",
     "name": "PWA con Material Design Chistes",
     "id": "/index.html",
-    "start_url": "/index.html",
+    "start_url": "/pwachistes/",
     "display": "standalone",
     "theme_color": "#fffbfe",
     "background_color": "#fffbfe",
