@@ -64,7 +64,7 @@
       "purpose": "any"
      },
      {
-      "src": "https://raw.githubusercontent.com/pwachistes/pwachistes/main/img/maskable_icon_x512.png",
+      "src": "/img/maskable_icon_x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
