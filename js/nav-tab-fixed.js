@@ -13,7 +13,7 @@ export class NavTabFixed extends HTMLElement {
 
    <a ${resaltaSiEstasEn(["/ayuda.html"])} href="ayuda.html">
     <span class="material-symbols-outlined">help</span>
-    Pestañas scrollable
+    Ayuda
    </a>`
 
  }
