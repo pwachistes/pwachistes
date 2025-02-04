@@ -71,7 +71,7 @@
   },
   {
    "src": "/img/maskable_icon.png",
-   "sizes": "3413x3413",
+   "sizes": "2048x2048",
    "type": "image/png",
    "purpose": "any"
   },
@@ -125,7 +125,7 @@
   },
   {
    "src": "/img/maskable_icon.png",
-   "sizes": "3413x3413",
+   "sizes": "2048x2048",
    "type": "image/png",
    "purpose": "maskable"
   }
