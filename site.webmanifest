@@ -70,12 +70,6 @@
    "purpose": "any"
   },
   {
-   "src": "img/maskable_icon.png",
-   "sizes": "2048x2048",
-   "type": "image/png",
-   "purpose": "any"
-  },
-  {
    "src": "img/icono2048.png",
    "sizes": "2048x2048",
    "type": "image/png",
